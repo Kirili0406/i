@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fff5f8">
+
+    <title>Для Эли ❤️</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Плавающие сердечки -->
+    <div class="hearts" id="hearts"></div>
+
+
+    <!-- Музыка -->
+    <audio id="romanticMusic" loop preload="auto">
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <button
+        class="music-button"
+        id="musicButton"
+        aria-label="Музыка"
+    >
+        🎵
+    </button>
+
+
+    <main class="container">
+
+        <!-- ==============================
+             ГЛАВНЫЙ ЭКРАН
+        =============================== -->
+
+        <section class="hero" id="hero">
+
+            <div class="small-heart">
+                ♥️
+            </div>
+
+            <p class="eyebrow">
+                НЕБОЛЬШОЕ ПОСЛАНИЕ ДЛЯ ТЕБЯ
+            </p>
+
+            <h1>
+                Эля,<br>
+                это <span>для тебя</span> ❤️
+            </h1>
+
+            <p class="intro">
+                Я долго думал, как красиво тебя пригласить,
+                поэтому решил сделать для тебя кое-что особенное.
+            </p>
+
+            <button
+                class="main-button"
+                id="startButton"
+            >
+                Открыть 💌
+            </button>
+
+            <div class="scroll-hint">
+                ♥️ специально для тебя
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             ПРИГЛАШЕНИЕ
+        =============================== -->
+
+        <section
+            class="invitation hidden"
+            id="invitation"
+        >
+
+            <div class="card">
+
+                <div class="card-decoration">
+                    ♡
+                </div>
+
+                <p class="eyebrow">
+                    ЭЛЯ
+                </p>
+
+                <h2>
+                    Пойдём<br>
+                    со мной на <span>свидание?</span>
+                </h2>
+
+                <p class="message">
+                    Никаких сложных планов.<br>
+                    Только ты, я и хороший день вместе.
+                </p>
+
+                <div class="divider"></div>
+
+                <h3>
+                    Выбери день, который тебе удобен
+                </h3>
+
+                <p class="date-description">
+                    Ты сама решаешь, когда мы устроим
+                    наше маленькое приключение ❤️
+                </p>
+
+
+                <!-- ДАТА -->
+
+                <div class="date-picker-wrapper">
+
+                    <label for="datePicker">
+                        📅 Дата свидания
+                    </label>
+
+                    <input
+                        type="date"
+                        id="datePicker"
+                    >
+
+                </div>
+
+
+                <!-- КНОПКИ -->
+
+                <div class="choice-buttons">
+
+                    <button
+                        class="yes-button"
+                        id="yesButton"
+                    >
+                        Да ❤️
+                    </button>
+
+                    <button
+                        class="maybe-button"
+                        id="maybeButton"
+                    >
+                        Нет 🙈
+                    </button>
+
+                </div>
+
+                <p
+                    class="selected-date"
+                    id="selectedDate"
+                ></p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             ВЫБОР МЕСТА
+        =============================== -->
+
+        <section
+            class="places hidden"
+            id="places"
+        >
+
+            <div class="section-heading">
+
+                <p class="eyebrow">
+                    ЕЩЁ ОДИН ВОПРОС
+                </p>
+
+                <h2>
+                    А куда<br>
+                    <span>пойдём?</span> 💗
+                </h2>
+
+                <p>
+                    Выбирай то, что хочется именно тебе.
+                </p>
+
+            </div>
+
+
+            <div class="place-grid">
+
+                <button
+                    class="place-card"
+                    data-place="Красивое кафе ☕"
+                >
+
+                    <div class="place-icon">
+                        ☕
+                    </div>
+
+                    <strong>
+                        Кафе
+                    </strong>
+
+                    <span>
+                        Посидеть, поговорить
+                        и вкусно поесть
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="place-card"
+                    data-place="Прогулка 🌆"
+                >
+
+                    <div class="place-icon">
+                        🌆
+                    </div>
+
+                    <strong>
+                        Прогулка
+                    </strong>
+
+                    <span>
+                        Просто гулять вместе
+                        и наслаждаться вечером
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="place-card"
+                    data-place="Что-нибудь необычное 🎡"
+                >
+
+                    <div class="place-icon">
+                        🎡
+                    </div>
+
+                    <strong>
+                        Приключение
+                    </strong>
+
+                    <span>
+                        Сделать что-нибудь
+                        необычное вместе
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="place-card"
+                    data-place="Сюрприз 🎁"
+                >
+
+                    <div class="place-icon">
+                        🎁
+                    </div>
+
+                    <strong>
+                        Сюрприз
+                    </strong>
+
+                    <span>
+                        Я всё придумаю сам 😉
+                    </span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             ФИНАЛ
+        =============================== -->
+
+        <section
+            class="final hidden"
+            id="final"
+        >
+
+            <div class="final-card">
+
+                <div class="big-heart">
+                    ♥️
+                </div>
+
+                <p class="eyebrow">
+                    ДОГОВОРИЛИСЬ ❤️
+                </p>
+
+                <h2>
+                    Эля,<br>
+                    жду тебя!
+                </h2>
+
+                <p class="final-text">
+                    Наше свидание состоится:
+                </p>
+
+                <div
+                    class="final-date"
+                    id="finalDate"
+                >
+                    —
+                </div>
+
+                <div
+                    class="final-place"
+                    id="finalPlace"
+                >
+                    —
+                </div>
+
+                <div class="final-message">
+                    Я уже жду этот день 🥰
+                </div>
+
+                <button
+                    class="again-button"
+                    id="againButton"
+                >
+                    Посмотреть ещё раз
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==============================
+         МОДАЛЬНОЕ ОКНО
+    =============================== -->
+
+    <div
+        class="modal hidden"
+        id="modal"
+    >
+
+        <div class="modal-background"></div>
+
+        <div class="modal-card">
+
+            <button
+                class="close-modal"
+                id="closeModal"
+            >
+                ×
+            </button>
+
+            <div class="modal-heart">
+                🥹❤️
+            </div>
+
+            <h2>
+                Ну хорошо...
+            </h2>
+
+            <p>
+                Можешь подумать.<br>
+                Но я всё равно надеюсь на «да» 😌
+            </p>
+
+            <button
+                class="modal-button"
+                id="modalYes"
+            >
+                Всё, я согласна ❤️
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+        Сделано специально для Эли ♥️
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
